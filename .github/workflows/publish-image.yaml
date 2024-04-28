@@ -1,16 +1,17 @@
+---
 name: Publish image to ghcr.io
-on: [workflow_dispatch]
-
+on:
+  - workflow_dispatch
 jobs:
-  publish_image:
-  runs-on: ubuntu:xenial
+  publish_image: null
+  runs-on: ubuntu-latest
   steps:
     - name: checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: build
       run: |
-        docker build. -t ghcr.io/chosomeister/socks5-docker:latest
+        docker build . -t ghcr.io/chosomeister/socks5-docker:latest
     - name: publish
       run: |
-        docker login -u brianmm02 -p ${{ secrets.GGHCR_TOKEN }}
+        docker login -u chosomeister -p ${{ secrets.GGHCR_TOKEN }} ghcr.io
         docker push ghcr.io/chosomeister/socks5-docker:latest
