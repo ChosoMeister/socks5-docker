@@ -5,6 +5,7 @@
 1. Clone this repo
 2. `docker build . -t socks5proxy` (change `socks5proxy` to whatever you want)
 3. `docker run --name proxy -d --restart=always -p 1080:1080 socks5proxy`
+4. OR just run this `docker run --name socks5-docker -d --restart=always -p 1080:1080 ghcr.io/chosomeister/socks5-docker:latest`
 
 ---
 
