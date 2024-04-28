@@ -6,3 +6,4 @@ services:
     ports:
       - 1080:1080
     image: ghcr.io/chosomeister/socks5-docker:latest
+networks: {}
