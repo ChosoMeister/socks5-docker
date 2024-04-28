@@ -1,0 +1,8 @@
+name: socks5-docker
+services:
+  socks5-docker:
+    container_name: socks5-docker
+    restart: always
+    ports:
+      - 1080:1080
+    image: ghcr.io/chosomeister/socks5-docker:latest
